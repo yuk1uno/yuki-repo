@@ -9,10 +9,6 @@
 * [Quantumult X教程](https://qx.atlucky.me/)
 * [Sub-Store](https://github.com/sub-store-org/Sub-Store)自行添加该模块或重写
 * repo中的配置均已验证过，均可正常使用
-### 机场推荐(月冲为宜)
-* [zhoushuren](https://zhoushuren.me/#/register?code=lhtSjHBR)
-* [Vmssr](https://ajax.vmssr.cc/#/register?code=GlFF6ROw)
-* [守候](https://dashboard.xttlove.uk/#/register?code=b03bYHxK)
 ## 免责声明!!!
 1. AuroraX_yolo发布的AuroraX_yolo repo项目中的配置涉及任何解锁和解密分析脚本仅用于学习研究，不保证其合法性、准确性、有效性，请根据情况自行判断，本人对此不承担任何保证责任。
 2. 由于此脚本仅用于学习研究，您必须在下载后 24 小时内将所有内容从您的计算机或手机或任何存储设备中完全删除，若违反规定引起任何事件本人对此均不负责。
