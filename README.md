@@ -1,4 +1,4 @@
-# AuroraX_yolo repo
+# yuki.uno repo
 此库存放自用配置以及各种分流规则
 ### 说明 :
 * [Script Hub](https://scripthub.vercel.app/)重写 & 规则集转换 
