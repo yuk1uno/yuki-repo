@@ -26,6 +26,9 @@ proxy-groups:
 - name: Proxy
   type: select
   proxies: []
+  lazy: true
+
+  
 - name: 香港节点
     filter: "香港|港|🇭🇰|HK|(?i)Hong"
     icon: https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Gallery/Color/HK.png
