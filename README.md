@@ -2,15 +2,11 @@
 此库存放自用配置以及各种分流规则
 ### 说明 :
 * [Script Hub](https://scripthub.vercel.app/)重写 & 规则集转换 
-* [Yfamily](https://whatshub.top/)分流规则和重写
 * [规则集](https://github.com/blackmatrix7/ios_rule_script)分流规则和重写及脚本
-* [Loon官方教程](https://is.gd/V6nyGA)
-* [Loon知识库](http://docs.nsloon.com/)
-* [Quantumult X教程](https://qx.atlucky.me/)
 * [Sub-Store](https://github.com/sub-store-org/Sub-Store)自行添加该模块或重写
 * repo中的配置均已验证过，均可正常使用
 ## 免责声明!!!
-1. yuki.uno发布的yuki-repo项目中的配置涉及任何解锁和解密分析脚本仅用于学习研究，不保证其合法性、准确性、有效性，请根据情况自行判断，本人对此不承担任何保证责任。
+1. yuki.uno发布的yuki-repo项目中的配置涉及任何解锁和解密分析脚本仅用于学习研究，本人对此不承担任何保证责任。
 2. 由于此脚本仅用于学习研究，您必须在下载后 24 小时内将所有内容从您的计算机或手机或任何存储设备中完全删除，若违反规定引起任何事件本人对此均不负责。
 3. 请勿将此配置用于任何商业或非法目的，若违反规定请自行对此负责。
 4. 此配置涉及应用与本人无关，本人对因此引起的任何隐私泄漏或其他后果不承担任何责任。
