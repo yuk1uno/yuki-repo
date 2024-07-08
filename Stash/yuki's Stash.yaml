@@ -1,1 +1,57 @@
+# 作者 https://t.me/yuk1shiro
+# @Updatetime 2024/07/09 UTC/GMT +8
 
+
+mode: rule
+log-level: info
+dns:
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fake-ip-filter:
+    - '+.music.163.com'
+    - 'musicapi.taihe.com'
+    - 'music.taihe.com'
+    - '+.y.qq.com'
+    - '+.music.tc.qq.com'
+    - 'aqqmusic.tc.qq.com'
+    - '+.stream.qqmusic.qq.com'
+  skip-cert-verify: true
+
+proxies: []
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies: []
+
+rules:
+  - RULE-SET,广告拦截,REJECT
+  - RULE-SET,Telegram,Proxy
+  - RULE-SET,Apple,Proxy
+  - RULE-SET,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
+
+rule-providers:
+  广告拦截:
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Stash/ruleset/Advertising.yaml
+
+  Telegram:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+
+  Apple:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix3/Scripts/master/Stash/ruleset/Apple.yaml
+
+  LAN:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/yuk1uno/yuki-repo/main/Rule/LAN/LAN.yaml
