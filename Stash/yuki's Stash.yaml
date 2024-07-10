@@ -39,7 +39,7 @@ proxy-groups:
     type: url-test
     include-all: true
     
-  - filter: 🇺🇸)|(States)|(US)|(美国)|(美國)
+  - filter: (🇺🇸)|(States)|(US)|(美国)|(美國)
     include-all: true
     name: 美国
     type: url-test
