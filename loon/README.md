@@ -1,4 +1,4 @@
-建议等待，此配置已过时，稍后会重新添加新配置
+Loon已更新。。。。
 
 https://raw.githubusercontent.com/yuk1uno/yuki-repo/main/loon/loon.conf
 
