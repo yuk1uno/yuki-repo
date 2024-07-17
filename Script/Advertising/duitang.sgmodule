@@ -61,11 +61,8 @@ DOMAIN,toblog.ctobsnssdk.com,REJECT
 
 [Map Local]
 ^https:\/\/api\.duitang\.com\/napi\/vienna\/daren\/daren\/recommend\/ data-type=text data="{}" status-code=200
-
 ^https:\/\/(www|api)\.duitang\.com\/napi\/(ad|ads)\/ data-type=text data="{}" status-code=200
-
 ^https:\/\/api\.duitang\.com\/napi\/infra\/settings\/ data-type=text data="{}" status-code=200
-
 
 [Script]
 FUCK = type=http-response, pattern=^https:\/\/(www|api)\.duitang\.com\/napi\/settings\/, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/DuiTang/DuiTang_remove_ads.js, requires-body=true
