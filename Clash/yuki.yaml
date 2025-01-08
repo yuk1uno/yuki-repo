@@ -1,0 +1,133 @@
+# Author: https://t.me/yuk1shiro
+# @Updatetime 2025/01/09 UTC/GMT +8
+
+port: 7190
+socks-port: 7191
+
+tcp-concurrent: true
+allow-lan: true
+log-level: info
+mode: rule
+unified-delay: true
+ipv6: true
+find-process-mode: strict
+external-controller: 0.0.0.0:9090
+global-client-fingerprint: chrome
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - 'localhost.ptlogin2.qq.com'
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80,8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443,8443]
+    QUIC:
+      ports: [443,8443]
+
+proxy-providers:
+  fuck:
+    type: http
+    url: "这里是你的订阅链接" 
+    interval: 3600
+    path: ./Server/yuki.yaml
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 1800
+
+proxy-groups:
+  - name: "FUCK"
+    type: select
+    lazy: true
+    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/softlyx/Orange.png
+    use:
+      - fuck
+    url: "https://www.gstatic.com/generate_204"
+    interval: 1800
+
+rules:
+  - IP-CIDR,95.161.76.100/31,REJECT
+  - RULE-SET,广告拦截,REJECT
+  - RULE-SET,OpenAI,FUCK
+  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,Telegram,FUCK
+  - RULE-SET,全球加速,FUCK
+  - GEOIP,CN,DIRECT
+  - MATCH,FUCK
+
+
+rule-providers:
+  广告拦截:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Advertising/Advertising_Classical.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Advertising/Advertising_Classical.yaml
+
+  Telegram:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Telegram/Telegram.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
+
+  全球加速:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./Global/Global_Classical.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global_Classical.yaml
+  
+  WeChat:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./WeChat/WeChat.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.yaml
+
+  OpenAI:
+    behavior: classical
+    interval: 86400
+    type: http
+    path: ./OpenAI/OpenAI.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml
